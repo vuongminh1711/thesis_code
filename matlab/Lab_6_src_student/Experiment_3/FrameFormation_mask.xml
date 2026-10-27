@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mask SelfModifiable="on">
+  <Type>FrameFormation</Type>
+  <SourceCheckSum>0682E5B0F5454373FD93AF8B4325CE3C</SourceCheckSum>
+  <Display IconOpaque="transparent" RunInitForIconRedraw="off">disp(&apos;FrameFormation&apos;);
+port_label(&apos;input&apos;,1,&apos;x&apos;);
+port_label(&apos;output&apos;,1,&apos;y&apos;);
+port_label(&apos;output&apos;,2,&apos;validFrm&apos;);
+</Display>
+  <Description>D. Tan 2024-09-19 % &amp; matlab.system.mixin.Propagates &amp; matlab.system.mixin.CustomIcon</Description>
+  <Initialization>matlab.system.MLSysBlockIconAndPortLabelsInfo.updateMLSysBlockIconAndPortLabels(gcbh)</Initialization>
+  <MaskParameter Name="OutputFrameLength" Type="edit" Tunable="off">
+    <Prompt>Output frame length:</Prompt>
+    <Value>581</Value>
+  </MaskParameter>
+  <MaskParameter Name="PerformSynchronization" Type="checkbox" Evaluate="off" Tunable="off">
+    <Prompt>Perform synchronization</Prompt>
+    <Value>on</Value>
+  </MaskParameter>
+  <MaskParameter Name="InternalBufferLength" Type="edit" Tunable="off" Visible="off">
+    <Prompt>Internal buffer length:</Prompt>
+    <Value>300</Value>
+  </MaskParameter>
+  <MaskParameter Name="FrameHeader" Type="edit" Tunable="off">
+    <Prompt>Frame header:</Prompt>
+    <Value>modHeader</Value>
+  </MaskParameter>
+  <MaskParameter Name="SimulateUsing" Type="popup" Evaluate="off" Tunable="off">
+    <Prompt>SystemBlock:MATLABSystem:SimulateUsing</Prompt>
+    <Value>Code generation</Value>
+    <TypeOptions>
+      <Option>SystemBlock:MATLABSystem:SimulateUsingCodeGeneration</Option>
+      <Option>SystemBlock:MATLABSystem:SimulateUsingInterpretedExecution</Option>
+    </TypeOptions>
+  </MaskParameter>
+  <DialogControl Type="Group" Name="DescGroupVar">
+    <Prompt>FrameFormation</Prompt>
+    <DialogControl Type="Text" Name="DescTextVar">
+      <Prompt>%&lt;MaskDescription&gt;</Prompt>
+    </DialogControl>
+    <DialogControl Type="Hyperlink" Name="SourceCodeLink">
+      <Prompt>Source code</Prompt>
+      <Callback>edit(&apos;FrameFormation&apos;);</Callback>
+    </DialogControl>
+  </DialogControl>
+  <DialogControl Type="Group" Name="SectionGroup0_Section1">
+    <Prompt>Simulink:studio:ToolBarParametersMenu</Prompt>
+    <ControlOptions AlignPrompts="on"/>
+    <DialogControl Type="Edit" Name="OutputFrameLength">
+      <Prompt>Output frame length:</Prompt>
+      <ControlOptions PromptLocation="left"/>
+    </DialogControl>
+    <DialogControl Type="CheckBox" Name="PerformSynchronization">
+      <Prompt>Perform synchronization</Prompt>
+    </DialogControl>
+    <DialogControl Type="Edit" Name="InternalBufferLength">
+      <Prompt>Internal buffer length:</Prompt>
+      <ControlOptions PromptLocation="left"/>
+    </DialogControl>
+    <DialogControl Type="Edit" Name="FrameHeader">
+      <Prompt>Frame header:</Prompt>
+      <ControlOptions PromptLocation="left"/>
+    </DialogControl>
+  </DialogControl>
+  <DialogControl Type="Panel" Name="SectionGroup0_Section2">
+    <ControlOptions AlignPrompts="on"/>
+    <DialogControl Type="Popup" Name="SimulateUsing">
+      <Prompt>Simulate using:</Prompt>
+      <Tooltip>SystemBlock:MATLABSystem:SimulateUsingDescription</Tooltip>
+      <ControlOptions PromptLocation="left"/>
+    </DialogControl>
+  </DialogControl>
+</Mask>
